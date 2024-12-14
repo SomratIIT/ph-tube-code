@@ -17,7 +17,17 @@ loadCategories();
 
 // Crrate displayCategories
 
-const displayCategories=(data)=>{
+const displayCategories=(categories)=>{
     // add Data in HTML
-    console.log(data);
+    const categoryContainer = document.getElementById('categories');
+  categories.forEach((Cat) => {
+    console.log(Cat);
+
+    // Create Button
+const button = document.createElement('button');
+button.classList = 'btn btn-large';
+button.innerText = Cat.category;
+// Add btn to catagory container
+categoryContainer.append(button);
+  });
 }
