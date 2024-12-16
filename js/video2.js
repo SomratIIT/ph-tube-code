@@ -1,4 +1,4 @@
-function loadData()
+/* function loadData()
 {
     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
     .then(res=>res.json())
@@ -18,4 +18,4 @@ categories.forEach(Cat => {
     button2.classList= 'btn'
     categoryContainer2.append(button2);
 });
-}
+} */
