@@ -1,3 +1,12 @@
+function  getTimeString(time)
+{   const hour = parseInt(time/3600) ;
+    const minutes = time %3600
+    const minute = parseInt(minutes/60) ;
+    const seconds = minutes %60
+    const second = seconds;
+    return `${hour} hour ${minute} minute ${second} second ago`;
+}
+
 console.log('Kaj kortese');
 
 // 1-Fetch ,Load and Show Categories on HTML
@@ -54,7 +63,12 @@ videos.forEach((VID)=>{
     <img
       src=${VID.thumbnail}
       alt="Shoes" class="h-full w-full object-cover"/>
-      <span class="absolute text-white right-2 bottom-2 bg-black rounded font-bold text-2xl p-2">${VID.others.posted_date}</span>
+    
+    ${
+        VID.others.posted_date?.length==0 ? "" :`<span class="absolute text-white right-2 bottom-2 bg-black rounded  p-2">${getTimeString(VID.others.posted_date)}</span>`
+      }
+    
+      
   </figure>
   <div class="px-0 py-2 flex gap-4">
     <div>
