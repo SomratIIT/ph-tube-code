@@ -64,7 +64,7 @@ removeActiveClass();
 
 // Display Videos
 const displayVideos = (videos) => {
-  console.log(videos);
+  // console.log(videos);
   const videoContainer = document.getElementById('videos');
   videoContainer.innerHTML = ""
   if (videos.length == 0) {
@@ -83,7 +83,7 @@ const displayVideos = (videos) => {
     videoContainer.classList.add('grid');
   }
   videos.forEach((VID) => {
-    console.log(VID);
+    // console.log(VID);
     const card = document.createElement("div");
     card.classList = 'card card-compact'
     card.innerHTML = `
@@ -92,8 +92,8 @@ const displayVideos = (videos) => {
       src=${VID.thumbnail}
       alt="Shoes" class="h-full w-full object-cover"/>
     
-    ${VID.others.posted_date?.length == 0 ? "" : `<span class="absolute text-white right-2 bottom-2 bg-black rounded  p-2 text-xs">${getTimeString(VID.others.posted_date)}</span>`
-      }
+    ${VID.others.posted_date?.length == 0 ? "" : `<span class="absolute text-white right-2 bottom-2 bg-black rounded  p-2 text-xs">${getTimeString(VID.others.posted_date)}</span>` 
+        }
     
       
   </figure>
